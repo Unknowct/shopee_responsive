@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="./assets/css/base.css">
         <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/grid.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
@@ -19,8 +21,8 @@
         <!-- Block(khoi) Element(phan tu thuoc khoi) Modifier(su thay doi cho element thuoc block) -->
         <div class="app">
             <header class="header">
-                <div class="grid">
-                    <nav class="header__navbar"> <!-- block__element block__element--modifier -->
+                <div class="grid wide">
+                    <nav class="header__navbar hide-on-mobile-tablet"> <!-- block__element block__element--modifier -->
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                                 Vào cửa hàng Kim Phụng`s Shop
@@ -135,7 +137,11 @@
 
                     <!-- Header with search -->
                     <div class="header-with-search">
-                        <div class="header__logo">
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+
+                        <div class="header__logo hide-on-tablet">
                             <a href="/" class="header__logo-link">
                                 <svg viewBox="0 0 192 65" class="header__logo-img">
                                     <g fill-rule="evenodd">
@@ -146,6 +152,8 @@
                                 </svg>
                             </a>
                         </div>
+
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
                         <div class="header__search">
                             <div class="header__search-input-wrap">
@@ -271,146 +279,7 @@
                                             </div>
                                         </li>
 
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/370597042_305544548681177_686988868681269617_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0debeb&_nc_ohc=BSl8XJYQVWwAX9kOZ2k&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfA75N69pIy2o8YAfWRKPqO86UEWDPlvqr0DS-Hj9h4_GA&oe=64EF0C7A" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Mặt Nạ EUNYUL Daily Care 22g</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">14.000</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qty">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-description">
-                                                        Phân loại: Black Bean
-                                                    </span>
-                                                    <span class="header__cart-item-remove">
-                                                        Xoá
-                                                    </span>
-                                                </div>
-
-                                            </div>
-                                        </li>
-
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fsgn5-6.fna.fbcdn.net/v/t39.30808-6/370480860_305544638681168_8643043127799685012_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=MBklPORsl_QAX-sbFv4&_nc_ht=scontent.fsgn5-6.fna&oh=00_AfCpaWGDLcDo5wACTVBMPwjiyffLUBIStxCO9sbMPepgFA&oe=64EF3FEC" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Mặt Nạ EUNYUL Daily Care 22g</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">14.000</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qty">4</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-description">
-                                                        Phân loại: Blueberry
-                                                    </span>
-                                                    <span class="header__cart-item-remove">
-                                                        Xoá
-                                                    </span>
-                                                </div>
-
-                                            </div>
-                                        </li>
-
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/370424067_305544495347849_1636433789375279157_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=0debeb&_nc_ohc=rCTPQ8mAvjAAX9xIu67&_nc_ht=scontent.fsgn5-12.fna&oh=00_AfDZnAF4jd9CyRKp95kCjqK54ycOB8VRaDOIa4Swrt0gvQ&oe=64F06E94" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Mặt Nạ EUNYUL Daily Care 22g</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">14.000</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qty">6</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-description">
-                                                        Phân loại: Tea Tree
-                                                    </span>
-                                                    <span class="header__cart-item-remove">
-                                                        Xoá
-                                                    </span>
-                                                </div>
-
-                                            </div>
-                                        </li>
-
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/370597042_305544548681177_686988868681269617_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0debeb&_nc_ohc=BSl8XJYQVWwAX9kOZ2k&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfA75N69pIy2o8YAfWRKPqO86UEWDPlvqr0DS-Hj9h4_GA&oe=64EF0C7A" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Mặt Nạ EUNYUL Daily Care 22g</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">14.000</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qty">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-description">
-                                                        Phân loại: Black Bean
-                                                    </span>
-                                                    <span class="header__cart-item-remove">
-                                                        Xoá
-                                                    </span>
-                                                </div>
-
-                                            </div>
-                                        </li>
-
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fsgn5-6.fna.fbcdn.net/v/t39.30808-6/370480860_305544638681168_8643043127799685012_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=MBklPORsl_QAX-sbFv4&_nc_ht=scontent.fsgn5-6.fna&oh=00_AfCpaWGDLcDo5wACTVBMPwjiyffLUBIStxCO9sbMPepgFA&oe=64EF3FEC" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Mặt Nạ EUNYUL Daily Care 22g</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">14.000</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qty">4</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-description">
-                                                        Phân loại: Blueberry
-                                                    </span>
-                                                    <span class="header__cart-item-remove">
-                                                        Xoá
-                                                    </span>
-                                                </div>
-
-                                            </div>
-                                        </li>
-
-                                        <li class="header__cart-item">
-                                            <img src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/370424067_305544495347849_1636433789375279157_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=0debeb&_nc_ohc=rCTPQ8mAvjAAX9xIu67&_nc_ht=scontent.fsgn5-12.fna&oh=00_AfDZnAF4jd9CyRKp95kCjqK54ycOB8VRaDOIa4Swrt0gvQ&oe=64F06E94" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Mặt Nạ EUNYUL Daily Care 22g</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">14.000</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-qty">6</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-description">
-                                                        Phân loại: Tea Tree
-                                                    </span>
-                                                    <span class="header__cart-item-remove">
-                                                        Xoá
-                                                    </span>
-                                                </div>
-
-                                            </div>
-                                        </li>
-
                                         
-                                    </ul>
 
                                     <a href="" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
 
@@ -421,13 +290,28 @@
                     </div>
                 </div>
 
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Liên quan</a>
+                    </li>
+                    <li class="header__sort-item header__sort-item--active">
+                        <a href="" class="header__sort-link">Mới nhất</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Bán chạy</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Giá</a>
+                    </li>
+                </ul>
+
             </header>
 
             <div class="app__container">
                 <!-- Column phai luon nam trong row -->
-               <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+               <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
 
                             <h3 class="category__heading">
@@ -451,9 +335,9 @@
                         </nav>
                     </div>
 
-                    <div class="grid__column-10">
+                    <div class="col l-10 m-12 c-12">
 
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -491,11 +375,64 @@
 
                         </div>
 
+                    <nav class="mobile-category">
+                        <ul class="mobile-category__list">
+
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm mặt, Trang điểm mắt, Trang điểm môi</a>
+                            </li>
+
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm mắt</a>
+                            </li>
+
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm môi</a>
+                            </li>
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm mặt</a>
+                            </li>
+
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm mắt</a>
+                            </li>
+
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm môi</a>
+                            </li><li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm mặt</a>
+                            </li>
+
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm mắt</a>
+                            </li>
+
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm môi</a>
+                            </li><li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm mặt</a>
+                            </li>
+
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm mắt</a>
+                            </li>
+
+                            <li class="mobile-category__item">
+                                <a href="" class="mobile-category__link">Trang điểm môi</a>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+
+
+
+
+
                         <!-- Grid -> Row -> Column -->
                         <div class="home-product">
-                            <div class="grid__row">
+                            <div class="row sm-gutter">
                                 <!-- Product item -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/product_1.jpeg');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g set 10 miếng sale chỉ 140k ( dùng được hàng ngày)</h4>
@@ -535,7 +472,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('./assets/img/product_2.jpeg');"></div>
                                         <h4 class="home-product-item__name">Son môi NARS - Nâu cam ấm</h4>
@@ -575,7 +512,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-6/370597042_305544548681177_686988868681269617_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0debeb&_nc_ohc=BSl8XJYQVWwAX8CyE8B&_nc_ht=scontent.fsgn7-1.fna&oh=00_AfAJ6e76-3nY7LqmkeXf3T8tSzxWPufU-13sVmktdyHVBg&oe=64F300FA');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g - Black bean</h4>
@@ -615,7 +552,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-6/370480860_305544638681168_8643043127799685012_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=MBklPORsl_QAX-O_RaP&_nc_ht=scontent.fsgn7-1.fna&oh=00_AfBnu1p0PhnelCLDnSXWqrVc2qEv0f2dP8zDxGs4TQwzjg&oe=64F3346C');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g - Blueberry</h4>
@@ -655,7 +592,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/370424067_305544495347849_1636433789375279157_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=0debeb&_nc_ohc=mEtsFnt5p38AX_4DGF4&_nc_ht=scontent.fsgn7-2.fna&oh=00_AfDjQ64xVwZml1AGT5OjMJOj4ZDmNiBOJUwcEsbUVkXuNg&oe=64F268D4');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g - Tea tree</h4>
@@ -695,7 +632,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-6/370424520_305544665347832_7723567554266302599_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0debeb&_nc_ohc=iNnzbSr4eGUAX8k7dkr&_nc_ht=scontent.fsgn7-1.fna&oh=00_AfC40TH33M5A0isCepfSZZgSlAwSesZdmD5HhRgfAzB8pg&oe=64F18F58');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g - Tomato</h4>
@@ -735,7 +672,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/370564186_305544692014496_3168074954923119951_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=-DA6oWodyjUAX-bSye3&_nc_ht=scontent.fsgn7-2.fna&oh=00_AfANfGzeG-nZR7XlRQnEfqnIIb2Ii127mBEqx7pRXtLykw&oe=64F2E606');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g - Rice</h4>
@@ -775,7 +712,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/370564186_305544465347852_2437071769734014014_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=0debeb&_nc_ohc=x3Ef2PfcdY0AX8PptpV&_nc_ht=scontent.fsgn7-2.fna&oh=00_AfBRAaJ0RjyvuHxX0ROqgP1a99_kL89qv2_Na9ZtWW1OJg&oe=64F28BBC');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g - Broccoli</h4>
@@ -815,7 +752,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/370044763_305544518681180_5436100572731228899_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0debeb&_nc_ohc=BgjCurg7QVUAX_GjmZO&_nc_ht=scontent.fsgn7-2.fna&oh=00_AfCDrwp4gjePiPypOmSr3EUUVzrE6byJmx9-W28fwocOsw&oe=64F33D08');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g - Shea butter</h4>
@@ -855,7 +792,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/369727104_305544582014507_4582887310350737663_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0debeb&_nc_ohc=SFmH3QqItk8AX_xIQLg&_nc_ht=scontent.fsgn7-2.fna&oh=00_AfAnw7VwLyWYsrJFNDTEWRe07H6a-inNA0cIO6WqqYl84w&oe=64F2C27B');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g - Vitamin</h4>
@@ -895,7 +832,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/369717346_305544612014504_4491108805313318906_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=0debeb&_nc_ohc=ypNOCnhUfm4AX_QSEnC&_nc_ht=scontent.fsgn7-2.fna&oh=00_AfBH2mhsWageRahRzjvpKmOsn_J_HEQGaPpDzH6sHng-_w&oe=64F1DB25');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Care 22g - Apple</h4>
@@ -935,7 +872,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/370512078_305543312014634_8852076605656656700_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0debeb&_nc_ohc=yIDgCaJxurIAX_jvZT0&_nc_ht=scontent.fsgn7-2.fna&oh=00_AfC-MD_wc-12M7PhaF0e7VMcv63ZwvTgpM_QVrmFqWQS3A&oe=64F31D46');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Purity 22ml set 10 miếng mix 120k</h4>
@@ -975,7 +912,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-2.fna.fbcdn.net/v/t39.30808-6/370430430_305543395347959_8146288182280069707_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0debeb&_nc_ohc=C6bWEOkvXUsAX88c2vA&_nc_ht=scontent.fsgn7-2.fna&oh=00_AfB1HW0nvcQb5w4sh9-DzFXqh1G9pWl1M6zzyeAhKTiXBw&oe=64F282A0');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Daily Purity 22g - Aqua</h4>
@@ -1015,7 +952,7 @@
 
                                 </div>
 
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://scontent.fsgn7-1.fna.fbcdn.net/v/t39.30808-6/369743187_305543442014621_8914355562683534044_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0debeb&_nc_ohc=Ox1yt3XPx4gAX-IMc_r&_nc_ht=scontent.fsgn7-1.fna&oh=00_AfC-X57BZJXxnl3ujcVw0WglXcGBtLFUqAn5hWi9fNCz2A&oe=64F3432E');"></div>
                                         <h4 class="home-product-item__name">Mặt Nạ EUNYUL Purity 22g - Pomegranate</h4>
@@ -1110,9 +1047,9 @@
             </div>
 
             <footer class="footer">
-                <div class="grid">
-                    <div class="grid__row">
-                        <div class="grid__column-2-4">
+                <div class="grid wide footer__content">
+                    <div class="row">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1126,7 +1063,7 @@
                                 </li>
                             </ul>                                     
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">GIỚI THIỆU</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1140,7 +1077,7 @@
                                 </li>
                             </ul>             
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">DANH MỤC</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1154,7 +1091,7 @@
                                 </li>
                             </ul>           
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">THEO DÕI CHÚNG TÔI</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1177,7 +1114,7 @@
                                 </li>
                             </ul>      
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-8 c-12">
                             <h3 class="footer__heading">VÀO CỬA HÀNG TRÊN ỨNG DỤNG</h3>
                             <div class="footer__download">
                                 <img src="./assets/img/qr_code.png" alt="Download QR" class="footer__download-qr">
@@ -1195,7 +1132,7 @@
                 </div>
 
                 <div class="footer__bottom">
-                    <div class="grid">
+                    <div class="grid wide">
                         <p class="footer__text">© 2023 Bản quyền thuộc về cá nhân Lưu Quốc Dũng - Website được tạo ra vì mục đích học tập, không vì mục đích thương mại</p>
                     </div>
                 </div>

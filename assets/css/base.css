@@ -9,6 +9,7 @@
     --header-height: 120px;
     --navbar-height: 34px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
 
 }
 
@@ -26,15 +27,7 @@ html {
 
 /* Man hinh lon hon 1200px thi kich thuoc 1200px, man hinh nho hon 1200px thi grid se giam kich thuoc grid=kich thuoc man hinh nho hon 1200px */
 /* Responsive */
-.grid {
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto; /* can giua */
-}
 
-.grid__full-width {
-    width: 100%;
-}
 
 /* the nam trong class nay se nam tren hang ngang */
 .grid__row {
